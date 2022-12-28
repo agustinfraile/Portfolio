@@ -1,8 +1,17 @@
-import React from 'react'
+import React from 'react';
+import { Link } from 'react-router-dom';
+import './Error.css'
 
 const Error = () => {
   return (
-    <div>Error</div>
+    <div> 
+      <h1>ERROR: REDIRIGIRSE A </h1>
+      <Link to='/'>
+        <button>HOME</button>
+      </Link> 
+
+    </div>
+    
   )
 }
 

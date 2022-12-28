@@ -1,0 +1,17 @@
+.intro_cnt {
+    width: 100%;
+    height: 70vh;
+    background-color: rgba(0, 0, 0, 0.413);
+}
+
+.first_cnt {
+    background-color: rgba(0, 0, 255, 0.227);
+    width: 100%;
+    height: 25vh;
+}
+
+.sec_cnt {
+    background-color: rgba(0, 0, 128, 0.386);
+    width: 100%;
+    height: 35vh;
+}
