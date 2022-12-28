@@ -1,0 +1,28 @@
+
+/* CONTENEDOR GENERAL */
+.project-cnt {
+    background-color: rgb(150, 103, 103);
+    width: 100%;
+    height: 100vh;
+    padding-top: 1em;
+}
+
+.project-cnt_title {
+    background-color: rgb(103, 150, 126);
+    width: 90%;
+    height: auto;
+    margin: 0 auto;
+    padding: 2.5em 0;
+}
+
+.project-cnt_title h3 {
+    font-size: 2.2em;
+    text-align: center;
+}
+
+.project-cnt_carrousel {
+    background-color: rgba(255, 255, 255, 0.48);
+    width: 90%;
+    margin: 0 auto;
+    height: 68vh;
+}

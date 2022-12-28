@@ -1,9 +1,12 @@
+
+/* CONTENEDOR GENERAL */
 .about-cnt {
     background-color: rgb(16, 161, 161);
     width: 100%;
     height: 100vh;
 }
 
+/* CONTENEDOR PARA EL PRIMERA SECCION */
 .about-cnt-first {
     background-color: rgb(121, 161, 49);
     width: 100%;
@@ -11,6 +14,7 @@
     padding: 1em 0;
 }
 
+/* CONTENEDOR PARA LA SEGUNDA SECCION */
 .about-cnt-sec {
     background-color: rgb(49, 133, 161);
     width: 100%;
@@ -18,6 +22,7 @@
     padding: 1em 0;
 }
 
+/* CONTENEDOR PARA EL TEXTO DE LAS SECCIONES */
 .about-cnt-text {
     background-color: rgb(171, 109, 138);
     display: flex;
@@ -26,11 +31,13 @@
     margin: 0 auto;
 }
 
+/* ESTILOS PARA EL TITULO DE CADA SECCION */
 .about-cnt-text h2 {
     font-size: 2.2em;
     text-align: center;
 }
 
+/* ESTILOS PARA EL PARRAFO DE CADA SECCION */
 .about-cnt-text p {
     font-size: 1.4em;
     text-align: center;
