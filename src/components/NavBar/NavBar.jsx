@@ -8,11 +8,13 @@ const NavBar = () => {
     <div className='nav_cnt'>
         <div className='nav_cnt-logo'>L</div>
         <ul>
-            <li>Home</li> 
-            <li>About</li>
-            <li>Projects</li>
-            <li>Contact</li>
+            <li>Sobre mi</li>
+            <li>Proyectos</li>
+            <li>Contacto</li>
         </ul>
+        <div className='mode-cnt'>
+          DM
+        </div>
     </div>
   )
 }
