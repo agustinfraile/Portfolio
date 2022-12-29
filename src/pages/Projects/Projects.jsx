@@ -1,4 +1,5 @@
 import React from 'react';
+import CardProject from '../../components/CardProject/CardProject';
 import './Projects.css';
 
 const Projects = () => {
@@ -10,7 +11,7 @@ const Projects = () => {
             </h3>
         </div>
         <div className='project-cnt_carrousel'>
-
+            <CardProject />
         </div>
     </div>
   )
