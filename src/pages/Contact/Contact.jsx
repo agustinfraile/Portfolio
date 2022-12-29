@@ -1,5 +1,6 @@
 import React from 'react';
 import Form from '../../components/Form/Form';
+import IconsComponent from '../../components/IconsComponent/IconsComponent';
 import './Contact.css';
 
 const Contact = () => {
@@ -9,6 +10,7 @@ const Contact = () => {
             <div className='contact_cnt-title'>
                 <h2>Podes encontrarme en</h2>
             </div>
+            <IconsComponent />
         </div>
         <div className='contact_cnt-form'>
             <div className='contact_cnt-form-subtitle'>
