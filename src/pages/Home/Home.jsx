@@ -1,6 +1,7 @@
 import React from 'react'
 import NavBar from '../../components/NavBar/NavBar'
 import About from '../About/About'
+import Contact from '../Contact/Contact'
 import Intro from '../Intro/Intro'
 import Projects from '../Projects/Projects'
 
@@ -12,6 +13,7 @@ const Home = () => {
        <Intro />
        <About/>
        <Projects />
+       <Contact />
     </div>
   )
 }
