@@ -5,9 +5,15 @@ const Intro = () => {
   return (
     <div className='intro_cnt'>
         <div className='first_cnt'>
+
             <div className='first_cnt-img'>
-               <div className='first_cnt-img--inside'></div> 
+
+               <div className='first_cnt-img--inside'></div>
+
             </div>
+
+            {/* <div className='first_cnt-box'></div> */}
+
         </div>
         <div className='sec_cnt'>
             <div className='sec_cnt-text'>

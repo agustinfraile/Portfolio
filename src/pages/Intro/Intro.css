@@ -67,3 +67,86 @@
     text-align: center;
     font-weight: bold;
 }
+
+/* 800px para adelante */
+@media (min-width: 800px) {
+    /* CONTENEDOR GENERAL */
+    .intro_cnt {
+        width: 100%;
+        height: 100vh;
+        background-color: rgb(49, 84, 156);
+        display: flex;
+    }
+
+
+        /* CONTENEDOR PARA EL PRIMER DIV */
+        .first_cnt {
+            background-color: rgba(43, 121, 22, 0.227);
+            width: 12em;
+            height: 92vh;
+            padding-top: 15em;
+            padding-left: 3em;
+            display: flex;
+            flex-direction: column;
+        }
+
+            /* CONTENEDOR PARA EL BORDE DE LA IMAGEN */
+            .first_cnt-img {
+                background-color: rgba(255, 255, 255, 0.456);
+                width: 16em;
+                height: 16em;
+                margin: 0 auto;
+                border-radius: 50%;
+                padding: .5em;
+            }
+
+
+            /* CONTENEDOR PARA LA IMAGEN  */
+            .first_cnt-img--inside {
+                background-color: rgba(119, 19, 19, 0.456);
+                width: 15em;
+                height: 15em;
+                margin: 0 auto;
+                border-radius: 50%;
+            }
+
+
+        /* CONTENEDOR PARA EL SEGUNDO DIV */
+        .sec_cnt {
+            background-color: rgba(0, 0, 128, 0.386);
+            width: 100%;
+            height: 92vh;
+            padding-top: 17.5em;
+            padding-left: 7em;
+        }
+
+
+        .first_cnt-box {
+            background-color: rgba(255, 255, 255, 0.427);
+        }
+
+        /* CONTENEDOR PARA EL DIV DE TEXTO */
+        .sec_cnt-text {
+            background-color: rgb(91, 70, 38);
+            width: 90%;
+            height: auto;
+            margin: 0 auto;
+        }
+
+        /* ESTILOS PARA EL TITULO */
+        .sec_cnt-text h1 {
+            color: #FFF;
+            font-size: 3em;
+            text-align: center;
+            font-weight: bold;
+        }
+
+        /* ESTILOS PARA EL PARRAFO */
+        .sec_cnt-text p {
+            padding-top: 1em;
+            color: #FFF;
+            font-size: 1.4em;
+            text-align: center;
+            font-weight: bold;
+        }
+}
