@@ -92,12 +92,14 @@
 
             /* CONTENEDOR PARA EL BORDE DE LA IMAGEN */
             .first_cnt-img {
-                background-color: rgba(255, 255, 255, 0.456);
+                background-color: rgb(255, 255, 255);
                 width: 16em;
                 height: 16em;
                 margin: 0 auto;
                 border-radius: 50%;
                 padding: .5em;
+                /* position: absolute; */
+                z-index: 1;
             }
 
 
@@ -118,11 +120,6 @@
             height: 92vh;
             padding-top: 17.5em;
             padding-left: 7em;
-        }
-
-
-        .first_cnt-box {
-            background-color: rgba(255, 255, 255, 0.427);
         }
 
         /* CONTENEDOR PARA EL DIV DE TEXTO */
