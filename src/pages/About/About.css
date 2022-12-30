@@ -43,3 +43,58 @@
     text-align: center;
     padding-top: .5em;
 }
+
+/* 800px para adelante */
+@media (min-width: 800px) {
+    /* CONTENEDOR GENERAL */
+    .about-cnt {
+        background-color: rgb(16, 161, 161);
+        width: 100%;
+        height: 100vh;
+    }
+
+        /* CONTENEDOR PARA EL PRIMERA SECCION */
+        .about-cnt-first {
+            background-color: rgb(121, 161, 49);
+            width: 100%;
+            height: 49vh;
+            padding: 1em 0;
+        }
+
+        /* CONTENEDOR PARA LA SEGUNDA SECCION */
+        .about-cnt-sec {
+            background-color: rgb(49, 133, 161);
+            width: 100%;
+            height: 49vh;
+            padding: 1em 0;
+        }
+
+            /* CONTENEDOR PARA EL TEXTO DE LAS SECCIONES */
+            .about-cnt-text {
+                background-color: rgb(171, 109, 138);
+                display: flex;
+                flex-direction: row;
+                width: 90%;
+                height: 44vh;
+                margin: 0 auto;
+            }
+
+                /* ESTILOS PARA EL TITULO DE CADA SECCION */
+                .about-cnt-text h2 {
+                    font-size: 2.2em;
+                    text-align: center;
+                    background-color: rgb(122, 110, 153);
+                    margin: 0 .5em;
+                    padding-top: 4em;
+                }
+
+                /* ESTILOS PARA EL PARRAFO DE CADA SECCION */
+                .about-cnt-text p {
+                    font-size: 1.5em;
+                    text-align: center;
+                    background-color: rgb(153, 110, 136);
+                    padding-top: 5em;
+                    padding-left: .5em;
+                    padding-right: .5em;
+                }
+}

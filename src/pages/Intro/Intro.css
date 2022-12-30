@@ -73,7 +73,7 @@
     /* CONTENEDOR GENERAL */
     .intro_cnt {
         width: 100%;
-        height: 100vh;
+        height: 94vh;
         background-color: rgb(49, 84, 156);
         display: flex;
     }
@@ -122,28 +122,28 @@
             padding-left: 7em;
         }
 
-        /* CONTENEDOR PARA EL DIV DE TEXTO */
-        .sec_cnt-text {
-            background-color: rgb(91, 70, 38);
-            width: 90%;
-            height: auto;
-            margin: 0 auto;
-        }
+            /* CONTENEDOR PARA EL DIV DE TEXTO */
+            .sec_cnt-text {
+                background-color: rgb(91, 70, 38);
+                width: 90%;
+                height: auto;
+                margin: 0 auto;
+            }
 
-        /* ESTILOS PARA EL TITULO */
-        .sec_cnt-text h1 {
-            color: #FFF;
-            font-size: 3em;
-            text-align: center;
-            font-weight: bold;
-        }
+            /* ESTILOS PARA EL TITULO */
+            .sec_cnt-text h1 {
+                color: #FFF;
+                font-size: 3em;
+                text-align: center;
+                font-weight: bold;
+            }
 
-        /* ESTILOS PARA EL PARRAFO */
-        .sec_cnt-text p {
-            padding-top: 1em;
-            color: #FFF;
-            font-size: 1.4em;
-            text-align: center;
-            font-weight: bold;
-        }
+            /* ESTILOS PARA EL PARRAFO */
+            .sec_cnt-text p {
+                padding-top: 1em;
+                color: #FFF;
+                font-size: 1.4em;
+                text-align: center;
+                font-weight: bold;
+            }
 }
