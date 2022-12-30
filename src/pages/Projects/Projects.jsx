@@ -10,6 +10,7 @@ const Projects = () => {
                 Proyectos en los que trabajé
             </h3>
         </div>
+        
         <div className='project-cnt_carrousel'>
             <CardProject />
         </div>
