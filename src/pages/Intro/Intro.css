@@ -3,13 +3,15 @@
 .intro_cnt {
     width: 100%;
     height: auto;
-    background-color: rgba(0, 0, 0, 0.413);
+    /* background-color: rgba(0, 0, 0, 0.413); */
+    
 }
 
 
 /* CONTENEDOR PARA EL PRIMER DIV */
 .first_cnt {
-    background-color: rgba(0, 0, 255, 0.227);
+    /* background-color: rgba(0, 0, 255, 0.227); */
+    background-color: #224180;
     width: 100%;
     height: 25vh;
     padding-top: 3em;
@@ -17,17 +19,23 @@
 
 /* CONTENEDOR PARA EL BORDE DE LA IMAGEN */
 .first_cnt-img {
-    background-color: rgba(255, 255, 255, 0.456);
+    /* background-color: rgba(255, 255, 255, 0.536); */
+    background-color: #d9d9d967;
+    
     width: 16em;
     height: 16em;
     margin: 0 auto;
     border-radius: 50%;
     padding: .5em;
+    position: relative;
+    
 }
 
 /* CONTENEDOR PARA LA IMAGEN  */
 .first_cnt-img--inside {
-    background-color: rgba(119, 19, 19, 0.456);
+    /* background-color: rgba(119, 19, 19, 0.456); */
+    background-color: #D9D9D9;
+
     width: 15em;
     height: 15em;
     margin: 0 auto;
@@ -37,7 +45,9 @@
 
 /* CONTENEDOR PARA EL SEGUNDO DIV */
 .sec_cnt {
-    background-color: rgba(0, 0, 128, 0.386);
+    /* background-color: rgba(0, 0, 128, 0.386); */
+    background-color: #4683FF;
+
     width: 100%;
     height: 60vh;
     padding: 10em 0;
@@ -45,7 +55,7 @@
 
 /* CONTENEDOR PARA EL DIV DE TEXTO */
 .sec_cnt-text {
-    background-color: rgb(91, 70, 38);
+    /* background-color: rgb(91, 70, 38); */
     width: 90%;
     height: auto;
     margin: 0 auto;
@@ -74,14 +84,14 @@
     .intro_cnt {
         width: 100%;
         height: 94vh;
-        background-color: rgb(49, 84, 156);
+        /* background-color: rgb(49, 84, 156); */
         display: flex;
     }
 
 
         /* CONTENEDOR PARA EL PRIMER DIV */
         .first_cnt {
-            background-color: rgba(43, 121, 22, 0.227);
+            background-color: #224180;
             width: 12em;
             height: 92vh;
             padding-top: 15em;
@@ -92,7 +102,7 @@
 
             /* CONTENEDOR PARA EL BORDE DE LA IMAGEN */
             .first_cnt-img {
-                background-color: rgb(255, 255, 255);
+                background-color: rgba(255, 255, 255, 0.536);
                 width: 16em;
                 height: 16em;
                 margin: 0 auto;
@@ -105,7 +115,7 @@
 
             /* CONTENEDOR PARA LA IMAGEN  */
             .first_cnt-img--inside {
-                background-color: rgba(119, 19, 19, 0.456);
+                background-color: #D9D9D9;
                 width: 15em;
                 height: 15em;
                 margin: 0 auto;
@@ -115,7 +125,7 @@
 
         /* CONTENEDOR PARA EL SEGUNDO DIV */
         .sec_cnt {
-            background-color: rgba(0, 0, 128, 0.386);
+            background-color: #4683FF;
             width: 100%;
             height: 92vh;
             padding-top: 17.5em;
@@ -124,7 +134,7 @@
 
             /* CONTENEDOR PARA EL DIV DE TEXTO */
             .sec_cnt-text {
-                background-color: rgb(91, 70, 38);
+                background-color: rgba(91, 70, 38, 0);
                 width: 90%;
                 height: auto;
                 margin: 0 auto;
