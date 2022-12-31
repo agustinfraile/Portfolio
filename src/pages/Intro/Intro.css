@@ -4,7 +4,7 @@
     width: 100%;
     height: auto;
     /* background-color: rgba(0, 0, 0, 0.413); */
-    
+    padding-top: 18em;
 }
 
 
@@ -86,6 +86,8 @@
         height: 94vh;
         /* background-color: rgb(49, 84, 156); */
         display: flex;
+        padding-top: 0em;
+
     }
 
 

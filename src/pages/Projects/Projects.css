@@ -1,7 +1,7 @@
 
 /* CONTENEDOR GENERAL */
 .project-cnt {
-    background-color: rgb(150, 103, 103);
+    background-color: #495B80;
     width: 100%;
     height: 100vh;
     padding-top: 1em;
@@ -9,7 +9,7 @@
 
 /* CONTENEDOR PARA EL TITULO */
 .project-cnt_title {
-    background-color: rgb(103, 150, 126);
+    /* background-color: rgb(103, 150, 126); */
     width: 90%;
     height: auto;
     margin: 0 auto;
@@ -24,7 +24,7 @@
 
 /* CONTENEDOR PARA EL CARRUSEL */
 .project-cnt_carrousel {
-    background-color: rgba(255, 255, 255, 0.48);
+    /* background-color: rgba(255, 255, 255, 0.48); */
     width: 90%;
     height: 68vh;
     margin: 0 auto;
@@ -35,7 +35,6 @@
 @media (min-width: 800px) {
     /* CONTENEDOR GENERAL */
     .project-cnt {
-        background-color: rgb(150, 103, 103);
         width: 100%;
         height: 90vh;
         padding-top: 1em;
@@ -43,7 +42,6 @@
 
         /* CONTENEDOR PARA EL CARRUSEL */
         .project-cnt_carrousel {
-            background-color: rgba(255, 255, 255, 0.48);
             width: 90%;
             height: 68vh;
             margin: 0 auto;

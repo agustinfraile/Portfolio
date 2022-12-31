@@ -6,14 +6,14 @@ import '../NavBar/NavBar.css';
 const NavBar = () => {
   return (
     <div className='nav_cnt'>
-        <div className='nav_cnt-logo'>L</div>
+        <div className='nav_cnt-logo'></div>
         <ul>
             <li>Sobre mi</li>
             <li>Proyectos</li>
             <li>Contacto</li>
         </ul>
         <div className='mode-cnt'>
-          DM
+          
         </div>
     </div>
   )

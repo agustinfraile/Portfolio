@@ -1,20 +1,27 @@
 .form_cnt {
-    background-color: rgba(255, 255, 255, 0.164);
+    /* background-color: rgba(255, 255, 255, 0.164); */
     width: 100%;
     height: auto;
     margin-top: 1em;
 }
 
 .form_cnt form {
-    background-color: bisque;
+    /* background-color: bisque; */
     width: 100%;
     height: 55vh;
     display: flex;
     flex-direction: column;
 }
 
-.form_cnt form input {
+.form_cnt--input {
+    /* background-color: rgb(68, 198, 66); */
     width: 90%;
+    margin: 0 auto;
+    /* display: flex; */
+}
+
+.form_cnt form input {
+    width: 100%;
     height: 2.5em;
     margin: 1em auto;
     border: none;
@@ -41,14 +48,14 @@
 /* 800px para adelante */
 @media (min-width: 800px) {
     .form_cnt {
-        background-color: rgb(197, 25, 25);
+        /* background-color: rgb(197, 25, 25); */
         width: 100%;
         height: auto;
         margin-top: 1em;
     }
 
     .form_cnt form {
-        background-color: rgb(198, 139, 66);
+        /* background-color: rgb(198, 139, 66); */
         width: 100%;
         height: 45vh;
         display: flex;
@@ -57,6 +64,7 @@
 
     .form_cnt--input {
         /* background-color: rgb(68, 198, 66); */
+        
         width: 90%;
         margin: 0 auto;
         display: flex;
