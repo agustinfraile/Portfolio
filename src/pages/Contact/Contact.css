@@ -55,3 +55,63 @@
     text-align: center;
     color: #FFF;
 }
+
+/* 800px para adelante */
+@media (min-width: 800px) {
+    /* CONTENEDOR GENERAL */
+    .contact-cnt {
+        background-color: rgb(88, 81, 164);
+        width: 100%;
+        height: auto;
+        padding-top: 5em;
+        padding-bottom: 1em;
+    }
+
+        /* CONTENEDOR PARA LOS ICONOS DE RRSS */
+        .contact_cnt-icons {
+            background-color: rgb(33, 101, 122);
+            width: 90%;
+            height: 50vh;
+            margin: 1em auto;
+        }
+
+            /* CONTENEDOR DE TITULO DE ICONOS */
+            .contact_cnt-title {
+                background-color: rgba(199, 199, 30, 0.486);
+                width: 100%;
+                height: auto;
+                margin: 0 auto;
+                padding: 2.5em 0;
+            }
+
+                /* ESTILOS PARA EL TITULO */
+                .contact_cnt-title h2 {
+                    font-size: 2.2em;
+                    text-align: center;
+                    color: #FFF;
+                }
+
+        /* CONTENEDOR PARA EL FORMULARIO */
+        .contact_cnt-form {
+            background-color: rgb(23, 140, 158);
+            width: 90%;
+            height: 65vh;
+            margin: 0 auto;
+        }
+
+        /* CONTENEDOR DE TITULO DE FORMULARIO */
+        .contact_cnt-form-subtitle {
+            background-color: rgba(199, 199, 30, 0.486);
+            width: 100%;
+            height: auto;
+            margin: 0 auto;
+            padding: 2.5em 0;
+        }
+
+        /* ESTILOS PARA EL SUBTITULO */
+        .contact_cnt-form-subtitle h3 {
+            font-size: 1.6em;
+            text-align: center;
+            color: #FFF;
+        }
+}
