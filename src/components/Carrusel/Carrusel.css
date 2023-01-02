@@ -1,0 +1,19 @@
+/* CONTENEDOR DE CARD */
+
+.card_cnt {
+    background-color: #363636;
+    width: 15em;
+    height: 20em;
+    margin: 0 auto;
+    border-radius: 20px;
+}
+
+/* 800px para adelante */
+@media (min-width: 800px) {
+    /* CONTENEDOR DE CARD */
+    .card_cnt {
+        background-color: #363636;
+        width: 15em;
+        height: 20em;
+    }
+}
