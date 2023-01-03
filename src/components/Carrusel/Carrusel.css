@@ -8,10 +8,34 @@
     border-radius: 20px;
 }
 
-/* 800px para adelante */
-@media (min-width: 800px) {
+
+ 
+
+.swiper {
+    /* background-color: rgba(255, 255, 255, 0.646); */
+    width: 100%;
+    padding-top: 50px;
+    padding-bottom: 50px;
+  }
+  
+  .swiper-slide {
+    /* background-color: rgba(168, 86, 86, 0.646); */
+
+    background-position: center;
+    background-size: cover;
+    width: 15em;
+    height:20em;
+  }
+  
+  .swiper-slide img {
+    display: block;
+    width: 100%;
+  }
+
+  /* 800px para adelante */
+/* @media (min-width: 800px) { */
     /* CONTENEDOR DE CARD */
-    .card_cnt {
+    /* .card_cnt {
         background-color: #363636;
         width: 15em;
         height: 20em;

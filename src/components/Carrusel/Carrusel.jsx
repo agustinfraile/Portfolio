@@ -1,40 +1,50 @@
-import React, { useState } from 'react';
-import Card from '../Card/Card';
-import './Carrusel.css';
+import React, { useRef, useState } from "react";
+// Import Swiper React components
+import { Swiper, SwiperSlide } from "swiper/react";
 
+// Import Swiper styles
+import "swiper/css";
+import "swiper/css/effect-coverflow";
+import "swiper/css/pagination";
+import "swiper/css/navigation";
 
+import "./Carrusel.css";
+
+// import required modules
+import { EffectCoverflow, Pagination, Navigation } from "swiper";
+import Card from "../Card/Card";
+// import { cards } from "../../data";
 
 const Carrusel = ({cards}) => {
-
-  const [currentIndex, setCurrentIndex] = useState(0);
-
-  // función para avanzar al siguiente elemento
-  const goToNext = () => {
-    setCurrentIndex(currentIndex + 1);
-  }
-
-  // función para retroceder al elemento anterior
-  const goToPrev = () => {
-    setCurrentIndex(currentIndex - 1);
-  }
-
   return (
-    <div className='carrusel'>
-      <Card data={cards[currentIndex]}/>
-      <button 
-        onClick={goToPrev} 
-        disabled={currentIndex === 0}
+    <>
+      <Swiper
+        effect={"coverflow"}
+        grabCursor={true}
+        centeredSlides={true}
+        slidesPerView={"auto"}
+        coverflowEffect={{
+          rotate: 1,
+          stretch: 0,
+          depth: 100,
+          modifier: 3,
+          slideShadows: true,
+        }}
+        pagination={true}
+        navigation={true}
+        modules={[EffectCoverflow, Pagination, Navigation]}
+        className="mySwiper"
       >
-        Anterior
-      </button>
-      <button 
-        onClick={goToNext} 
-        disabled={currentIndex === cards.length - 1}
-      >
-        Siguiente
-      </button>
-    </div>
-  )
+        {
+          cards.map((card) => (
+            <SwiperSlide key={card.id}>
+              <Card data={card}/>
+            </SwiperSlide>
+          ))
+        }
+      </Swiper>
+    </>
+  );
 }
 
 export default Carrusel
