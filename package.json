@@ -10,9 +10,12 @@
   },
   "dependencies": {
     "bootstrap": "^5.2.3",
+    "formik": "^2.2.9",
+    "nodemailer": "^6.8.0",
     "react": "^18.2.0",
     "react-bootstrap": "^2.6.0",
     "react-dom": "^18.2.0",
+    "react-form": "^4.0.1",
     "react-router-dom": "^6.4.4",
     "swiper": "^8.4.5"
   },

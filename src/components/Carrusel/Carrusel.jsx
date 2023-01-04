@@ -26,8 +26,8 @@ const Carrusel = ({cards}) => {
         coverflowEffect={{
           rotate: 1,
           stretch: 0,
-          depth: 100,
-          modifier: 3,
+          depth:100,
+          modifier: 4,
           slideShadows: true,
         }}
         pagination={true}

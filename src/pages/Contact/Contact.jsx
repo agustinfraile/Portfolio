@@ -1,5 +1,5 @@
 import React from 'react';
-import Form from '../../components/Form/Form';
+import ContactForm from '../../components/Form/Form';
 import IconsComponent from '../../components/IconsComponent/IconsComponent';
 import './Contact.css';
 
@@ -25,7 +25,7 @@ const Contact = () => {
                 </h3>
             </div>
 
-            <Form />
+            <ContactForm />
 
         </div>
 
