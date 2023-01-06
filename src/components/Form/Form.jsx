@@ -18,50 +18,67 @@ const ContactForm = () => {
   });
   // Estado para controlar si el formulario ha sido enviado o no
   const [submitted, setSubmitted] = useState(false);
+  // Este estado nos permite saber si el botón de envío del formulario está deshabilitado o no. 
+  const [isButtonDisabled, setIsButtonDisabled] = useState(true);
+
+
 
   // Función para validar el contenido de un campo del formulario
   const validate = (field, value) => {
-    // Valida el campo de nombre
+    // Si el valor del campo es falso, es decir, si el campo está vacío
+    if (!value) {
+    // Regresamos un mensaje de error indicando que el campo es obligatorio
+    return 'Este campo es obligatorio';
+    }
+    // Si el nombre del campo es "name"
     if (field === 'name') {
-      // Si el valor del campo no cumple con la expresión regular, devuelve un mensaje de error
-      return !value.match(/^[a-zA-Z\s]+$/) ? 'El nombre solo puede tener letras' : '';
-    } 
-    
-    // Valida el campo de correo
+    // Regresamos un mensaje de error si el valor no cumple con el patrón de solo letras y espacios, de lo contrario, regresamos una cadena vacía
+    return !value.match(/^[a-zA-Z\s]+$/) ? 'El nombre solo puede tener letras' : '';
+    }
+    // Si el nombre del campo es "email"
     else if (field === 'email') {
-      // Si el valor del campo no cumple con la expresión regular, devuelve un mensaje de error
-      return !value.match(/^[^@]+@[^@]+\.[^@]+$/) ? 'Ingresa un correo válido' : '';
-    } 
-    
-    // Valida el campo de descripción
+    // Regresamos un mensaje de error si el valor no cumple con el patrón de un correo válido, de lo contrario, regresamos una cadena vacía
+    return !value.match(/^[^@]+@[^@]+.[^@]+$/) ? 'Ingresa un correo válido' : '';
+    }
+    // Si el nombre del campo es "description"
     else if (field === 'description') {
-      // Si el valor del campo no cumple con la expresión regular, devuelve un mensaje de error
-      return !value.match(/^[a-zA-Z0-9\s,.$?!]+$/) ? 'La descripción solo puede tener letras, números y (!,?,$)' : '';
+    // Regresamos un mensaje de error si el valor no cumple con el patrón de solo letras, números y espacios, de lo contrario, regresamos una cadena vacía
+    return !value.match(/^[a-zA-Z0-9\s]+$/) ? 'La descripción solo puede tener letras y números' : '';
     }
   };
   
 
-  // Función para manejar cambios en los campos del formulario
+  // Esta función verifica si el botón debe estar deshabilitado o no, dependiendo de si hay errores en los campos del formulario o si estos campos están vacíos. Si alguno de estos casos se cumple, la función devuelve "true" y el botón se deshabilita. En caso contrario, devuelve "false" y el botón está habilitado.
+  const shouldButtonBeDisabled = () => {
+    return errors.name || errors.email || errors.description || !name || !email || !description;
+  };
+  
+
+  // Esta función es la encargada de manejar el cambio de los inputs del formulario
   const handleChange = (event) => {
-    // Obtiene el nombre y el valor del campo que ha cambiado
+    // Extraemos el nombre y el valor del input que está siendo modificado
     const { name, value } = event.target;
 
-    // Si el campo es el nombre, actualiza el estado del nombre y valida el contenido
+    // Dependiendo del nombre del input, actualizamos el estado correspondiente
+    // y validamos el valor ingresado
     if (name === 'name') {
       setName(value);
+      // Actualizamos el error del nombre y lo guardamos en el estado errors
       setErrors((prevErrors) => ({ ...prevErrors, name: validate('name', value) }));
-    } 
-    // Si el campo es el correo, actualiza el estado del correo y valida el contenido
-    else if (name === 'email') {
+    } else if (name === 'email') {
       setEmail(value);
+      // Actualizamos el error del correo y lo guardamos en el estado errors
       setErrors((prevErrors) => ({ ...prevErrors, email: validate('email', value) }));
-    } 
-    // Si el campo es la descripción, actualiza el estado de la descripción y valida el contenido
-    else if (name === 'reason') {
+    } else if (name === 'reason') {
       setDescription(value);
+      // Actualizamos el error de la descripción y lo guardamos en el estado errors
       setErrors((prevErrors) => ({ ...prevErrors, description: validate('description', value) }));
     }
+    // Actualizamos el estado de isButtonDisabled según la función shouldButtonBeDisabled
+    setIsButtonDisabled(shouldButtonBeDisabled());
   };
+
+  
 
   // Función para manejar el envío del formulario
   const handleSubmit = (event) => {
@@ -69,7 +86,7 @@ const ContactForm = () => {
     event.preventDefault();
 
     // Si hay errores en algún campo, termina la función
-    if (errors.name || errors.email || errors.description) {
+    if (errors.name || errors.email || errors.description || !name || !email || !description) {
       return;
     }
 
@@ -120,8 +137,14 @@ const ContactForm = () => {
         />
         {errors.description && <p>{errors.description}</p>}
   
-        {/* Botón para enviar el formulario. Está deshabilitado si hay errores en algún campo o si algún campo está vacío. */}
-        <button type="submit" disabled={errors.name || errors.email || errors.description || !name || !email || !description}>Enviar</button>
+        {/* El botón "Enviar" está desactivado si el estado "isButtonDisabled" es verdadero. */}
+        <button 
+          type="submit" 
+          disabled={isButtonDisabled}
+        >
+          Enviar
+        </button>
+        
       </form>
     </div>
   );  
