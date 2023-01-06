@@ -21,7 +21,7 @@ const Contact = () => {
 
             <div className='contact_cnt-form-subtitle'>
                 <h3>
-                    Tambien podes contactarme a traves de mail
+                    Tambien podes contactarme dejandome un correo
                 </h3>
             </div>
 

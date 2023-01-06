@@ -1,114 +1,131 @@
 import React, { useState } from 'react';
 import './Form.css';
 
-// Creamos un componente de formulario que maneje la lógica de validación
+
 const ContactForm = () => {
-  // Inicializamos el estado para cada uno de los campos del formulario
-  const [name, setName] = useState({ value: '', isValid: false });
-  const [email, setEmail] = useState({ value: '', isValid: false });
-  const [reason, setReason] = useState({ value: '', isValid: false });
-  const [message, setMessage] = useState('');
 
-  // Creamos una función que se ejecutará cada vez que el usuario escriba algo en un campo
+  // Estado para el nombre del usuario
+  const [name, setName] = useState('');
+  // Estado para el correo del usuario
+  const [email, setEmail] = useState('');
+  // Estado para la descripción del usuario
+  const [description, setDescription] = useState('');
+  // Estado para los errores del formulario
+  const [errors, setErrors] = useState({
+    name: '',
+    email: '',
+    description: '',
+  });
+  // Estado para controlar si el formulario ha sido enviado o no
+  const [submitted, setSubmitted] = useState(false);
+
+  // Función para validar el contenido de un campo del formulario
+  const validate = (field, value) => {
+    // Valida el campo de nombre
+    if (field === 'name') {
+      // Si el valor del campo no cumple con la expresión regular, devuelve un mensaje de error
+      return !value.match(/^[a-zA-Z\s]+$/) ? 'El nombre solo puede tener letras' : '';
+    } 
+    
+    // Valida el campo de correo
+    else if (field === 'email') {
+      // Si el valor del campo no cumple con la expresión regular, devuelve un mensaje de error
+      return !value.match(/^[^@]+@[^@]+\.[^@]+$/) ? 'Ingresa un correo válido' : '';
+    } 
+    
+    // Valida el campo de descripción
+    else if (field === 'description') {
+      // Si el valor del campo no cumple con la expresión regular, devuelve un mensaje de error
+      return !value.match(/^[a-zA-Z0-9\s,.$?!]+$/) ? 'La descripción solo puede tener letras, números y (!,?,$)' : '';
+    }
+  };
+  
+
+  // Función para manejar cambios en los campos del formulario
   const handleChange = (event) => {
-    // Obtenemos el valor y el nombre del campo que ha cambiado
+    // Obtiene el nombre y el valor del campo que ha cambiado
     const { name, value } = event.target;
-    // Si el campo está vacío, marcamos el campo como inválido
-    if (value === '') {
-      if (name === 'name') {
-        setName({ value, isValid: false });
-      } else if (name === 'email') {
-        setEmail({ value, isValid: false });
-      } else {
-        setReason({ value, isValid: false });
-      }
-    // Si el campo es el de correo, comprobamos si el formato es válido
-    } else if (name === 'email') {
-      // Creamos una expresión regular para comprobar el formato del correo
-      // Empiece con cualquier carácter que no sea <, >, (, ), [, ], \, ., ,, ;, :, , @, o ". Esto se hace con la expresión [^<>()[\]\\.,;:\s@"]+.
-      // Puede haber un punto (.) seguido de cualquier carácter que no sea <, >, (, ), [, ], \, ., ,, ;, :, , @, o ". Esto se hace con la expresión (\.[^<>()[\]\\.,;:\s@"]+)*.
-      // O bien, puede haber una cadena de caracteres entre comillas dobles ("). Esto se hace con la expresión ".+".
-      // Después de esto, debe haber un arroba (@).
-      // A continuación, puede haber una cadena entre corchetes ([]) que represente una dirección IP. Esto se hace con la expresión \[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\].
-      // O bien, puede haber una cadena que contenga un nombre de dominio. Esto se hace con la expresión ([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}.
-      const emailRegex = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
-      // Si el correo cumple con el patrón, marcamos el campo como válido
-      setEmail({ value, isValid: emailRegex.test(value) });
-    // Si el campo es cualquier otro, marcamos el campo como válido
-    } else {
-      if (name === 'name') {
-        setName({ value, isValid: true });
-      } else {
-        setReason({ value, isValid: true });
-      }
+
+    // Si el campo es el nombre, actualiza el estado del nombre y valida el contenido
+    if (name === 'name') {
+      setName(value);
+      setErrors((prevErrors) => ({ ...prevErrors, name: validate('name', value) }));
+    } 
+    // Si el campo es el correo, actualiza el estado del correo y valida el contenido
+    else if (name === 'email') {
+      setEmail(value);
+      setErrors((prevErrors) => ({ ...prevErrors, email: validate('email', value) }));
+    } 
+    // Si el campo es la descripción, actualiza el estado de la descripción y valida el contenido
+    else if (name === 'reason') {
+      setDescription(value);
+      setErrors((prevErrors) => ({ ...prevErrors, description: validate('description', value) }));
     }
   };
 
-  // Creamos una función que se ejecutará cuando el usuario envíe el formulario
+  // Función para manejar el envío del formulario
   const handleSubmit = (event) => {
-    // Prevenimos que la página se recargue
+    // Previene la acción por defecto del evento de envío (recargar la página)
     event.preventDefault();
-    // Si algún campo no es válido, mostramos un mensaje de error
-    if (!name.isValid || !email.isValid || !reason.isValid) {
-      setMessage('Por favor, rellena todos los campos correctamente');
-      // Si todos los campos son válidos, mostramos un mensaje de éxito y reseteamos los campos
-    } else {
-      setMessage('Formulario enviado correctamente');
-      setName({ value: '', isValid: false });
-      setEmail({ value: '', isValid: false });
-      setReason({ value: '', isValid: false });
-      // Después de 2 segundos, limpiarnos el mensaje
-      setTimeout(() => {
-        setMessage('');
-        // Llevamos al usuario al inicio de la página
-        window.scrollTo(0, 0);
-      }, 1500);
-      // Recargamos la página
-      // window.location.reload();
+
+    // Si hay errores en algún campo, termina la función
+    if (errors.name || errors.email || errors.description) {
+      return;
     }
+
+    // Marca el formulario como enviado
+    setSubmitted(true);
+    // Limpia los campos del formulario
+    setName('');
+    setEmail('');
+    setDescription('');
   };
+
 
   return (
-    // Creamos el formulario con los campos y la función de envío
     <div className='form_cnt'>
+      {/* Formulario que llama a la función handleSubmit al enviarse */}
       <form onSubmit={handleSubmit}>
+        {/* Muestra un mensaje de éxito si el formulario ha sido enviado con éxito */}
+        {submitted ? <p>Formulario enviado con éxito</p> : ''}
         <div className='form_cnt--input'>
-          <label htmlFor="name">Nombre:</label>
+          {/* Campo de texto para el nombre. Llama a handleChange al cambiar el contenido. Muestra un mensaje de error si hay un error en el campo. */}
           <input
             type="text"
             name="name"
-            value={name.value}
+            placeholder='Ingrese su nombre'
+            value={name}
             onChange={handleChange}
           />
-          {!name.isValid && name.value !== '' && <p className="error">Por favor, introduce un nombre válido</p>}
-          {name.isValid && <p className="success">Nombre válido</p>}
-          <br />
-          <label htmlFor="email">Correo:</label>
+          {errors.name && <p>{errors.name}</p>}
+  
+          {/* Campo de texto para el correo. Llama a handleChange al cambiar el contenido. Muestra un mensaje de error si hay un error en el campo. */}
           <input
             type="text"
             name="email"
-            value={email.value}
+            placeholder='Ingrese su correo electronico'
+            value={email}
             onChange={handleChange}
           />
-          {!email.isValid && email.value !== '' && <p className="error">Por favor, introduce un correo válido</p>}
-          {email.isValid && <p className="success">Correo válido</p>}
+          {errors.email && <p>{errors.email}</p>}
+  
         </div>
-        <br />
-        <label htmlFor="reason">Motivo del contacto:</label>
-        <select name="reason" value={reason.value} onChange={handleChange}>
-          <option value="">Selecciona una opción</option>
-          <option value="consulta">Consulta</option>
-          <option value="sugerencia">Sugerencia</option>
-          <option value="otro">Otro</option>
-        </select>
-        <br />
-        {/* Si hay un mensaje, lo mostramos */}
-      {message && <p className="form__message">{message}</p>}
-
-        <button type="submit">Enviar</button>
+        
+        {/* Campo de texto para la descripción. Llama a handleChange al cambiar el contenido. Muestra un mensaje de error si hay un error en el campo. */}
+        <textarea
+          name="reason"
+          placeholder='Ingresa una breve descripción'
+          value={description}
+          onChange={handleChange}
+        />
+        {errors.description && <p>{errors.description}</p>}
+  
+        {/* Botón para enviar el formulario. Está deshabilitado si hay errores en algún campo o si algún campo está vacío. */}
+        <button type="submit" disabled={errors.name || errors.email || errors.description || !name || !email || !description}>Enviar</button>
       </form>
     </div>
-  );
+  );  
+
 };
 
 export default ContactForm;

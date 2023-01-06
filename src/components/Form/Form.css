@@ -30,13 +30,17 @@
 
 }
 
-.form_cnt form select {
+.form_cnt form textarea {
     width: 90%;
-    height: 2.5em;
+    height: 6em;
     margin: 0 auto;
     border: none;
     border-radius: 9px;
     color: black;
+}
+
+.form_cnt form ::placeholder {
+    padding: 1em;
 }
 
 .form_cnt form button {
@@ -46,6 +50,16 @@
     margin: 1em auto;
     border: none;
     border-radius: 16px;
+}
+
+.error {
+    color: #dc3545;
+    font-weight: bold;
+}
+  
+.success {
+    color: #35dc46;
+    font-weight: bold;
 }
 
 /* 800px para adelante */
