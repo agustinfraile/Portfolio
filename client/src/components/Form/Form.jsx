@@ -42,8 +42,8 @@ const ContactForm = () => {
     }
     // Si el nombre del campo es "description"
     else if (field === 'description') {
-    // Regresamos un mensaje de error si el valor no cumple con el patrón de solo letras, números y espacios, de lo contrario, regresamos una cadena vacía
-    return !value.match(/^[a-zA-Z0-9\s]+$/) ? 'La descripción solo puede tener letras y números' : '';
+      // Si el valor del campo no cumple con la expresión regular, devuelve un mensaje de error
+      return !value.match(/^[a-zA-Z0-9\s,.$?!]+$/) ? 'La descripción solo puede tener letras, números y (!,?,$)' : '';
     }
   };
   
