@@ -26,7 +26,7 @@ const ContactForm = () => {
   // Función para validar el contenido de un campo del formulario
   const validate = (field, value) => {
     // Si el valor del campo es falso, es decir, si el campo está vacío
-    if (!value) {
+    if (!value || value.trim().length === 0) {
     // Regresamos un mensaje de error indicando que el campo es obligatorio
     return 'Este campo es obligatorio';
     }
