@@ -1,9 +1,11 @@
 import React from 'react';
 import './IconCircle.css';
 
-const IconCircle = () => {
+const IconCircle = ({image}) => {
   return (
-    <span className='icons_cnt-icon'></span>
+    <div className='icons_cnt-icon'>
+      <img src={image} alt={`Imagen de ${image}`} />
+    </div>
   )
 }
 

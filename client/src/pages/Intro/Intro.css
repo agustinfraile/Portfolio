@@ -42,6 +42,14 @@
     border-radius: 50%;
 }
 
+.first_cnt-img--inside img {
+    width: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    
+}
+
 
 /* CONTENEDOR PARA EL SEGUNDO DIV */
 .sec_cnt {

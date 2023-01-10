@@ -2,6 +2,7 @@ import React from 'react';
 import ContactForm from '../../components/Form/Form';
 import IconCircle from '../../components/IconCircle/IconCircle';
 import IconsComponent from '../../components/IconsComponent/IconsComponent';
+import email  from '../../assets/images/icons/email.png'
 import './Contact.css';
 
 const Contact = () => {
@@ -27,7 +28,7 @@ const Contact = () => {
             </div>
 
             <div className='contact_cnt-form-icon'>
-                <IconCircle />
+                <IconCircle image={email}/>
             </div>            
             {/* <ContactForm /> */}
 

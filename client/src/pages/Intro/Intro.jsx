@@ -1,4 +1,5 @@
 import React from 'react';
+import profilePicture from '../../assets/images/image-profile.png';
 import './Intro.css';
 
 const Intro = () => {
@@ -8,7 +9,9 @@ const Intro = () => {
 
             <div className='first_cnt-img'>
 
-               <div className='first_cnt-img--inside'></div>
+               <div className='first_cnt-img--inside'>
+                    <img src={profilePicture} alt="Imagen de perfil" />
+               </div>
 
             </div>
 
