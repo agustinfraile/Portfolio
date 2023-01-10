@@ -39,7 +39,7 @@
     background-color: #224180;
     
     width: 100%;
-    height: 90vh;
+    height: 40vh;
     margin: 0 auto;
 }
 
@@ -59,13 +59,19 @@
     color: #FFF;
 }
 
+.contact_cnt-form-icon {
+    /* background-color: #4683FF; */
+    display: flex;
+    justify-content: center;
+}
+
 /* 800px para adelante */
 @media (min-width: 800px) {
     /* CONTENEDOR GENERAL */
     .contact-cnt {
         /* background-color: rgb(88, 81, 164); */
         width: 100%;
-        height: auto;
+        height: 80vh;
         padding-top: 5em;
         padding-bottom: 1em;
     }
@@ -99,7 +105,7 @@
             /* background-color: rgb(23, 140, 158); */
             background-color: #224180;
             width: 100%;
-            height: 65vh;
+            height: 30vh;
             margin: 0 auto;
         }
 

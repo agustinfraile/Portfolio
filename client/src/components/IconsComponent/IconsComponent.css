@@ -6,15 +6,6 @@
     flex-direction: column;
 }
 
-.icons_cnt-icon {
-    background-color: #fff;
-    display: inline-block;
-    width: 7em;
-    height: 7em;
-    margin: 1em auto;
-    border-radius: 50%;
-}
-
 /* 800px para adelante */
 @media (min-width: 800px) {
     .icons_cnt {
