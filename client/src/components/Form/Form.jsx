@@ -75,7 +75,7 @@ const ContactForm = () => {
       setErrors((prevErrors) => ({ ...prevErrors, description: validate('description', value) }));
     }
     // Actualizamos el estado de isButtonDisabled según la función shouldButtonBeDisabled
-    setIsButtonDisabled(shouldButtonBeDisabled());
+    // setIsButtonDisabled(shouldButtonBeDisabled());
   };
 
   
@@ -140,7 +140,7 @@ const ContactForm = () => {
         {/* El botón "Enviar" está desactivado si el estado "isButtonDisabled" es verdadero. */}
         <button 
           type="submit" 
-          disabled={isButtonDisabled}
+          disabled={errors.name || errors.email || errors.description || !name || !email || !description}
         >
           Enviar
         </button>

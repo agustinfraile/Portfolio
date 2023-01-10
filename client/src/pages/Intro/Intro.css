@@ -83,8 +83,8 @@
     /* CONTENEDOR GENERAL */
     .intro_cnt {
         width: 100%;
-        height: 94vh;
-        /* background-color: rgb(49, 84, 156); */
+        height: auto;
+        background-color: rgb(49, 84, 156);
         display: flex;
         padding-top: 0em;
 
@@ -95,7 +95,7 @@
         .first_cnt {
             background-color: #224180;
             width: 12em;
-            height: 92vh;
+            height: 100vh;
             padding-top: 15em;
             padding-left: 3em;
             display: flex;
@@ -129,7 +129,7 @@
         .sec_cnt {
             background-color: #4683FF;
             width: 100%;
-            height: 92vh;
+            height: 100vh;
             padding-top: 17.5em;
             padding-left: 7em;
         }
