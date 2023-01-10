@@ -11,8 +11,14 @@ const IconsComponent = () => {
       {/* <span className='icons_cnt-icon'></span>
       <span className='icons_cnt-icon'></span>
       <span className='icons_cnt-icon'></span> */}
-      <IconCircle image={github} />
-      <IconCircle image={linkedin} />
+      <IconCircle 
+        image={github} 
+        link='https://github.com/agustinfraile'
+      />
+      <IconCircle 
+        image={linkedin} 
+        link='https://www.linkedin.com/in/agustinfraile/'
+      />
       {/* <IconCircle /> */}
     </div>
   )
