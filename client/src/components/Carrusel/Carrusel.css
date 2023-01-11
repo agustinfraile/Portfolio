@@ -7,7 +7,7 @@
 }
   
 .swiper-slide {
-    background-color: rgba(168, 86, 86, 0.576);
+    /* background-color: rgba(168, 86, 86, 0.576); */
     border-radius: 20px;
     background-position: center;
     background-size: cover;

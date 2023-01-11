@@ -3,18 +3,46 @@
 /* CONTENEDOR DE CARD */
 
 .card_cnt {
-    /* background-color: #363636; */
-    width: 15em;
+    background-color: #363636;
+    width: 14em;
     height: 20em;
     margin: 0 auto;
     border-radius: 20px;
     padding: 1em;
 }
 
+.card_cnt--image {
+    background-color: rgb(202, 202, 202);
+    width: 100%;
+    height: 60%;
+    border-radius: 10px 10px 0 0;
+}
+
 .card_cnt--title {
     /* background-color: rgba(40, 160, 66, 0.813); */
     width: 100%;
-    height: auto;
+    height: 15%;
+    padding-top: .5em;
+}
+
+.card_cnt--title h3 {
+    /* background-color: antiquewhite; */
+    text-align: center;
+    font-weight: bold;
+    font-size: 1.3em;
+}
+
+.card_cnt--description {
+    /* background-color: antiquewhite; */
+    width: 100%;
+    height: 25%;
+    padding-top: .6em;
+}
+
+.card_cnt--description p {
+    /* background-color: rgb(18, 125, 146); */
+    text-align: center;
+    font-size: 1.1em;
 }
 
 
