@@ -8,7 +8,7 @@ const About = () => {
   AOS.init()
 
   return (
-    <div className='about-cnt'>
+    <div className='about-cnt'  id='sobre-mi'>
 
       <div className='about-cnt-first'>
 

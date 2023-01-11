@@ -6,7 +6,7 @@ import './Contact.css';
 
 const Contact = () => {
   return (
-    <div className='contact-cnt'>
+    <div className='contact-cnt' id='contact'>
 
         <div className='contact_cnt-icons'>
 
