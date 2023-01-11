@@ -17,9 +17,9 @@ const About = () => {
           data-aos="fade-right"
           data-aos-duration='2000'
         >
-          <h2>Titulo</h2>
+          <h2>Conocimientos</h2>
           <p>
-            "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+            AQUI VA LOS LOGOS DE LAS TECNOLOGIAS QUE USO
           </p>
         </div>
 
@@ -32,9 +32,9 @@ const About = () => {
           data-aos="fade-left"
           data-aos-duration='2000'
         >
-          <h2>Titulo</h2>
+          <h2>FORMACION</h2>
           <p>
-            "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+            AQUI VA LOS LOGOS DE LOS LUGARES EMPRESAS DONDE APRENDI
           </p>
         </div>
 

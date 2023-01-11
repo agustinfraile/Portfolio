@@ -32,7 +32,7 @@ const Intro = () => {
             >
                 <h1>Hola! soy Agustin</h1>
                 <p>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                Soy un desarrollador con experiencia en dar vida a proyectos digitales. Me apasiona el mundo del desarrollo web. Si estas buscando un desarrollador con ganas de trabajar en proyectos interesantes, no dudes en contactarme!
                 </p>
             </div>
         </div>

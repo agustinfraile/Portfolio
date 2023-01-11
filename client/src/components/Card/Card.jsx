@@ -10,9 +10,18 @@ const Card = ({data}) => {
 
     return (
         <SwiperSlide className='card_cnt'>
-            <h3>{title}</h3>
-            <h6>{id}</h6>
-            <p>{description}</p>
+            <div className='card_cnt--image'>
+                {/* AQUI VA LA IMAGEN */}
+            </div>
+            <div className='card_cnt--title'>
+                <h3>{title}</h3>
+            </div>
+            {/* <div className='card_cnt--id'>
+                <h6>{id}</h6>
+            </div> */}
+            <div className='card_cnt--description'>
+                <p>{description}</p>
+            </div>
         </SwiperSlide>
     )
 }
