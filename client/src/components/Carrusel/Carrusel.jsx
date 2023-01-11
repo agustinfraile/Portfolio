@@ -22,16 +22,17 @@ const Carrusel = ({cards}) => {
         effect={"coverflow"}
         grabCursor={true}
         centeredSlides={true}
-        slidesPerView={"auto"}
+        slidesPerView={'auto'}
         coverflowEffect={{
           rotate: 1,
-          stretch: 0,
+          stretch: 10,
           depth:100,
-          modifier: 4,
+          modifier: 5,
           slideShadows: true,
         }}
         pagination={true}
         navigation={true}
+        loop={true}
         modules={[EffectCoverflow, Pagination, Navigation]}
         className="mySwiper"
       >
