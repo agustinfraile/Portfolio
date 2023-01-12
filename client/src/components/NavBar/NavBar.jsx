@@ -1,6 +1,6 @@
 import React from 'react';
-import cv from '../../assets/images/icons/cv-logo.png'
-import pdf from '../../assets/pdf/cv.pdf'
+import cv from '../../assets/images/icons/cv-logo.png';
+import pdf from '../../assets/pdf/cv.pdf';
 import '../NavBar/NavBar.css';
 
 const NavBar = () => {
@@ -40,7 +40,7 @@ const NavBar = () => {
           <img src={ cv } />
         </div>
     </div>
-  )
-}
+  );
+};
 
 export default NavBar

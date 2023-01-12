@@ -23,10 +23,15 @@
     flex-direction: column;
 }
 
+.nav_cnt ul a {
+    text-decoration: none;
+    width: 8em;
+}
+
 .nav_cnt ul li {
-    /* background-color: rgba(114, 82, 82, 0.71); */
+    /* background-color: rgba(255, 255, 255, 0.571); */
     display: flex;
-    padding: 1em 0;
+    padding: .92em 0;
     margin: .2em 0;
     justify-content: center;
     font-weight: bold;
