@@ -6,12 +6,12 @@ import './Card.css';
 
 const Card = ({data}) => {
   
-    const { title, description, id } = data;
+    const { title, description, id, image, link } = data;
 
     return (
-        <SwiperSlide className='card_cnt'>
+        <SwiperSlide className='card_cnt' onClick={() => window.open(link)}>
             <div className='card_cnt--image'>
-                {/* AQUI VA LA IMAGEN */}
+                <img src={image} alt={`Imagen de ${title}`} />
             </div>
             <div className='card_cnt--title'>
                 <h3>{title}</h3>

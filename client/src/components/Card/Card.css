@@ -12,10 +12,18 @@
 }
 
 .card_cnt--image {
-    background-color: rgb(202, 202, 202);
+    /* background-color: rgb(202, 202, 202); */
     width: 100%;
     height: 60%;
     border-radius: 10px 10px 0 0;
+}
+
+.card_cnt--image img {
+    width: 100%;
+    /* height: 100%; */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
 }
 
 .card_cnt--title {
@@ -53,22 +61,30 @@
     .card_cnt {
         background-color: #363636;
         width: 16.5em;
-        height: 21em;
+        height: auto;
         padding: 1em;
 
     }
 
     .card_cnt--image {
-        background-color: rgb(202, 202, 202);
+        /* background-color: rgb(202, 202, 202); */
         width: 100%;
-        height: 60%;
+        height: 12em;
         border-radius: 10px 10px 0 0;
+    }
+
+    .card_cnt--image img {
+        width: 100%;
+        /* height: 100%; */
+        background-position: center;
+        background-size: contain;
+        background-repeat: no-repeat;
     }
 
     .card_cnt--title {
         /* background-color: rgba(40, 160, 66, 0.813); */
         width: 100%;
-        height: 15%;
+        height: 2em;
         padding-top: .5em;
     }
 
@@ -82,7 +98,7 @@
     .card_cnt--description {
         /* background-color: antiquewhite; */
         width: 100%;
-        height: 25%;
+        height: 5em;
         padding-top: .6em;
     }
 

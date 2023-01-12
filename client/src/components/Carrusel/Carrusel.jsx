@@ -32,7 +32,7 @@ const Carrusel = ({cards}) => {
         }}
         pagination={true}
         navigation={true}
-        initialSlide={2}
+        initialSlide={1}
 
         modules={[EffectCoverflow, Pagination, Navigation]}
         className="mySwiper"
