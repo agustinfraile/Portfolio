@@ -1,6 +1,8 @@
 import React from 'react';
 import AOS from 'aos';
 import './About.css';
+import IconTech from '../../components/IconTech/IconTech';
+import IconEducation from '../../components/IconEducation/IconEducation';
 
 
 const About = () => {
@@ -18,9 +20,15 @@ const About = () => {
           data-aos-duration='2000'
         >
           <h2>Conocimientos</h2>
-          <p>
-            AQUI VA LOS LOGOS DE LAS TECNOLOGIAS QUE USO
-          </p>
+          
+          <div className='about-cnt-tech'>
+            <IconTech />
+            <IconTech />
+            <IconTech />
+            <IconTech />
+            <IconTech />
+            <IconTech />
+          </div>
         </div>
 
       </div>
@@ -33,9 +41,12 @@ const About = () => {
           data-aos-duration='2000'
         >
           <h2>FORMACION</h2>
-          <p>
-            AQUI VA LOS LOGOS DE LOS LUGARES EMPRESAS DONDE APRENDI
-          </p>
+          <div className='about-cnt-education'>
+            <IconEducation />
+            <IconEducation />
+            <IconEducation />
+            <IconEducation />
+          </div>
         </div>
 
       </div>

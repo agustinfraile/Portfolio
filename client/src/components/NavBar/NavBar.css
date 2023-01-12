@@ -73,11 +73,23 @@
         justify-content: center;
     }
 
-    .mode-cnt {
-        /* background-color: darkcyan; */
-        width: 9%;
+    .nav_cv {
+        background-color: rgb(233, 233, 233);
+        width: 3.5em;
         height: 2em;
         margin: .5em .2em;
         border-radius: 15px;
+        padding: 0 .7em;
+        cursor: pointer;
+    }
+    
+    .nav_cv img{
+        /* background-color: rgb(66, 163, 130); */
+        /* background-color: #fff; */
+        /* width: 50%; */
+        height: 2em;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: contain;
     }
 }

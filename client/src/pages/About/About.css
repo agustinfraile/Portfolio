@@ -35,6 +35,10 @@
     padding: 4em;
 }
 
+.about-cnt-tech {
+    width: 70%;
+}
+
 /* ESTILOS PARA EL TITULO DE CADA SECCION */
 .about-cnt-text h2 {
     font-size: 2.2em;
@@ -47,6 +51,7 @@
     text-align: center;
     padding-top: .5em;
 }
+
 
 /* 800px para adelante */
 @media (min-width: 800px) {
@@ -76,27 +81,51 @@
             /* CONTENEDOR PARA EL TEXTO DE LAS SECCIONES */
             .about-cnt-text {
                 /* background-color: rgb(171, 109, 138); */
-                display: flex;
-                flex-direction: row;
+                /* display: flex; */
+                /* flex-direction: row; */
                 width: 80%;
                 height: auto;
                 margin: 0 auto;
             }
+            
+            .about-cnt-tech {
+                background-color: rgba(0, 0, 0, 0.416);
+                width: 90%;
+                height: auto;
+                margin: 2em auto;
+                padding: 1em;
+                display: flex;
+                justify-content: space-between;
+                flex-direction: row;
+                flex-wrap: wrap;
+            }
+
+            .about-cnt-education {
+                background-color: rgba(0, 0, 0, 0.416);
+                width: 90%;
+                height: auto;
+                margin: 2em auto;
+                padding: 1em;
+                display: flex;
+                justify-content: space-between;
+                flex-direction: row;
+                flex-wrap: wrap;
+            }
 
                 /* ESTILOS PARA EL TITULO DE CADA SECCION */
                 .about-cnt-text h2 {
+                    background-color: rgb(122, 110, 153);
                     font-size: 2.2em;
                     text-align: center;
-                    /* background-color: rgb(122, 110, 153); */
-                    margin: 0 .5em;
-                    padding-top: 4em;
+                    margin: 1em .5em;
+                    /* padding-top: 4em; */
                 }
 
                 /* ESTILOS PARA EL PARRAFO DE CADA SECCION */
                 .about-cnt-text p {
+                    /* background-color: rgb(153, 110, 136); */
                     font-size: 1.5em;
                     text-align: center;
-                    /* background-color: rgb(153, 110, 136); */
                     padding-top: 5em;
                     padding-left: .8em;
                     padding-right: .8em;
