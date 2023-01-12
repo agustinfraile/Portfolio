@@ -4,7 +4,6 @@ import './IconEducation.css';
 const IconEducation = () => {
   return (
     <div className='education-cnt'>
-        
     </div>
   )
 }

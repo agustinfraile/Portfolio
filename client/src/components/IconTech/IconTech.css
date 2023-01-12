@@ -1,7 +1,13 @@
 .tech-cnt {
     background-color: rgb(198, 198, 198);
-    width: 7em;
-    height: 7em;
+    width: 7.5em;
+    height: 7.5em;
     border-radius: 21px;
+    box-shadow: 2px 2px 4px 2px rgba(0, 0, 0, 0.142);
 }
 
+.tech-cnt img {
+    width: 100%;
+    background-position: center;
+    border-radius: 21px;
+}

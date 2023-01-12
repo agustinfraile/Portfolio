@@ -5,7 +5,7 @@ import AOS from 'aos';
 import './Intro.css';
 
 const Intro = () => {
-  AOS.init()
+  AOS.init();
   return (
     <div className='intro_cnt' id='inicio'>
         <div className='first_cnt'>

@@ -1,7 +1,7 @@
 
 /* CONTENEDOR GENERAL */
 .project-cnt {
-    background-color: #495B80;
+    background-color: #495b80b2;
     width: 100%;
     height: 100vh;
     padding-top: 1em;
@@ -36,12 +36,22 @@
     /* CONTENEDOR GENERAL */
     .project-cnt {
         width: 100%;
-        height: 90vh;
+        height: 100vh;
         padding-top: 1em;
     }
 
+        .project-cnt_title {
+            /* background-color: rgb(103, 150, 126); */
+            width: 90%;
+            height: auto;
+            margin: 3em auto;
+            padding: 2.5em 0;
+        }
+
         /* CONTENEDOR PARA EL CARRUSEL */
         .project-cnt_carrousel {
+            /* background-color: rgba(255, 255, 255, 0.48); */
+
             width: 90%;
             height: 68vh;
             margin: 0 auto;
